@@ -1,0 +1,27 @@
+# ignore .git and .cache folders
+.git
+.cache
+
+# ignore images format
+.png
+.jpg
+.jpeg
+.gif
+.bitmap
+**assets/
+
+# ignore all *.class files in all folders, including build root
+**/*.class
+
+# ignore all markdown files
+*.md
+!README*.md
+README-secret.md
+
+# ignore secrets folder and files
+secrets/*
+
+# ignore development files
+docker-compose.yaml
+docker-compose.yml
+**env/*
