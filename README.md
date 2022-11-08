@@ -61,3 +61,25 @@ Para acceder a la consola CLI basta con ejecutar
 ```bash
 docker exec -it nombre_cotenedor mysql -u nombre_usuario -P numero_puerto -p
 ```
+
+## Exportar | Importar
+
+para importar o exportar una base de datos se puede ejecutar con un exec de docker, por ejemplo importar:
+
+```bash
+docker exec -i container_name mysql -u root -P 3306 -pmypass mysql < db.sql
+```
+
+para exportar:
+
+```bash
+docker exec -i database_c1 mysqldump -u root -P 3306 -pmypass mysql > ~/db.sql 
+```
+
+en caso necesario también puedes incluir el flag -h 
+
+si estás en PowerShell Windows deberás envolver el comando en un cmd: 
+
+```powershell
+cmd /c "docker exec -i $mysql_container mysql -uuser -ppassword dbname < data.sql"
+```
